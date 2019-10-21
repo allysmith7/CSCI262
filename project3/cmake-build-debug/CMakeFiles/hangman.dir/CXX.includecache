@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/cole/bin/csci262/project3/hangman.cpp
-fstream
--
-iostream
--
-hangman.h
-/Users/cole/bin/csci262/project3/hangman.h
-
 /Users/cole/bin/csci262/project3/hangman.h
 string
 -
@@ -21,4 +13,16 @@ set
 -
 map
 -
+
+/Users/cole/bin/csci262/project3/main.cpp
+iostream
+-
+string
+-
+cstdlib
+-
+cctype
+-
+hangman.h
+/Users/cole/bin/csci262/project3/hangman.h
 
