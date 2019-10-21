@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/cole/bin/csci262/project1/personality_test.h
+string
+-
+vector
+-
+iostream
+-
+
+/Users/cole/bin/csci262/project1/proj1.cpp
+iostream
+-
+string
+-
+fstream
+-
+vector
+-
+personality_test.h
+/Users/cole/bin/csci262/project1/personality_test.h
+

@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/cole/bin/csci262/lab03/rwg.cpp
+rwg.h
+/Users/cole/bin/csci262/lab03/rwg.h
+limits
+-
+cstdlib
+-
+ctime
+-
+
+/Users/cole/bin/csci262/lab03/rwg.h
+iostream
+-
+string
+-
+vector
+-
+

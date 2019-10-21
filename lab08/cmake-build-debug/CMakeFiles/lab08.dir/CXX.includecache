@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/cole/bin/csci262/lab08/hash_functions.h
+string
+-
+
+/Users/cole/bin/csci262/lab08/main.cpp
+iostream
+-
+iomanip
+-
+fstream
+-
+string
+-
+vector
+-
+map
+-
+random
+-
+set
+-
+unordered_set
+-
+algorithm
+-
+hash_functions.h
+/Users/cole/bin/csci262/lab08/hash_functions.h
+

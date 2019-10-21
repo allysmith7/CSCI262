@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/cole/bin/csci262/project2/maze_solver.cpp
+maze_solver.h
+/Users/cole/bin/csci262/project2/maze_solver.h
+iostream
+-
+fstream
+-
+string
+-
+stack
+-
+queue
+-
+
+/Users/cole/bin/csci262/project2/maze_solver.h
+iostream
+-
+vector
+-
+stack
+-
+queue
+-
+
