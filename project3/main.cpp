@@ -34,7 +34,11 @@ int main() {
 
 	// Keep playing the game until the user decides otherwise
 	while (true) {
+		// each time the game starts, the list of words is reset, aka filled with each word from dictionary.txt
+		game.reset_words();
 		int word_size = 0;
+
+		// loops until the word size provided is valid, aka a word of the given size exists in the set
 		for (;;) {
 			word_size = get_integer("How long of a word would you like?");
 			if (game.is_valid_size(word_size)) break;
@@ -44,8 +48,7 @@ int main() {
 		int num_guesses = get_integer("How many guesses would you like? ");
 		cout << endl;
 
-		bool spoiled =
-			get_yesno("Do you want the illusion of a fair game to be ruined by being able to see how many words remain?");
+		bool spoiled = get_yesno("Do you want the illusion of a fair game to be ruined by being able to see how many words remain?");
 
 		game.start_new_game(word_size, num_guesses, spoiled);
 
@@ -72,7 +75,7 @@ int main() {
 
 			if (game.is_spoiled()) {
 				cout << "There are " << game.get_remaining_word_count();
-				cout << " words remaining" << endl << endl;
+				cout << " words remaining" << endl;
 			}
 
 			bool good_guess = game.process_guess(guess);
@@ -86,7 +89,7 @@ int main() {
 			}
 
 			if (game.is_won()) {
-				cout << "Congratulations! You won the game!" << endl;
+				cout << "Congratulations! You won the game! The word was " << game.display_word << endl;
 			}
 
 			if (game.is_lost()) {

@@ -76,20 +76,21 @@ class hangman {
   int get_remaining_word_count();
 
   bool is_valid_size(int size);
+
+  // Sorts the guessed characters
+  void sort_guessed_characters();
+  void reset_words();
  private:
   // holds all of the words
   set<string> words;
+
   bool spoilers;
 
   int _word_size;
 
   int _guesses_remaining;
-
   // Holds a map based on the word family as the key and a set of words  that fall under that family
   map<string, set<string>> get_word_families(char guess);
-  // Sorts the guessed characters
-  void sort_guessed_characters();
-  void reset_words();
 };
 
 #endif

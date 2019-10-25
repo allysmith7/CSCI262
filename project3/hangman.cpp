@@ -26,12 +26,12 @@ hangman::hangman() {
 //
 // Setup a new game of hangman.
 void hangman::start_new_game(int ws, int ng, bool s) {
+
 	set_word_size(ws);
 	set_remaining_guesses(ng);
 	set_spoiled(s);
 	guessed_chars = "";
 	// fills the set with all words from ./cmake-build-debug/dictionary.txt
-	reset_words();
 
 	// sets display word to the correct number of dashes
 	display_word = "";
