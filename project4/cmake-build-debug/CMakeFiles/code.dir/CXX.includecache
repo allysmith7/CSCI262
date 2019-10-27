@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/cole/bin/csci262/project4/model.h
+string
+-
+iostream
+-
+
+/Users/cole/bin/csci262/project4/word_model.cpp
+word_model.h
+/Users/cole/bin/csci262/project4/word_model.h
+
+/Users/cole/bin/csci262/project4/word_model.h
+model.h
+/Users/cole/bin/csci262/project4/model.h
+map
+-
+vector
+-
+sstream
+-
+
