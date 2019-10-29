@@ -15,16 +15,19 @@
 #define _MODEL_H
 
 #include <string>
+#include <sstream>
 #include <iostream>
+#include <map>
+#include <vector>
 
 class markov_model {
-public:
-	// give the model the example text and the model order; the model
-	// should do any preprocessing in this call
-	virtual void initialize(std::string text, int order) = 0;
+ public:
+  // give the model the example text and the model order; the model
+  // should do any preprocessing in this call
+  virtual void initialize(std::string text, int order) = 0;
 
-	// produce a text in the style of the example
-	virtual std::string generate(int size) = 0;
+  // produce a text in the style of the example
+  virtual std::string generate(int size) = 0;
 };
 
 #endif

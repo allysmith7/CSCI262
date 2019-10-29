@@ -1,19 +1,19 @@
 /*
    CSCI 262 Data Structures, Fall 2019, Project 4 - Markov
 
-   Author: Lucas Henke
+   Author: Cole Smith
 
-   Modified: 10/24/2019
+   Modified: 10/28/2019
 */
 
 #include "word_model.h"
 
 void word_model::initialize(string text, int order) {
 	// stores text and order value for use in the generate method
-    _text = text;
-    _order = order;
+	_text = text;
+	_order = order;
 
-    stringstream ss(_text);
+	stringstream ss(_text);
 
 	string currentWord;
 	vector<string> kWords;
@@ -44,11 +44,10 @@ void word_model::initialize(string text, int order) {
 	}
 }
 
-
 string word_model::generate(int size) {
 	string results;
 
-    // puts all words into a vector
+	// puts all words into a vector
 	stringstream ss(_text);
 	vector<string> words;
 	string s;
@@ -58,7 +57,7 @@ string word_model::generate(int size) {
 	}
 
 	// finds the index of the word that will start the output
-	unsigned int start = rand() % (words.size() + size);
+	unsigned int start = rand()%(words.size() + size);
 
 	vector<string> seed;
 	// adds the first 3 words to the seed vector
@@ -70,7 +69,7 @@ string word_model::generate(int size) {
 		vector<string> possibleWords = _map.at(seed);
 
 		// generates a random index
-		int randomIndex = rand() % possibleWords.size();
+		int randomIndex = rand()%possibleWords.size();
 
 		// stores the word from the vector at the index
 		string nextWord = possibleWords[randomIndex];
@@ -81,7 +80,7 @@ string word_model::generate(int size) {
 		shiftKey(seed, nextWord);
 	}
 
-    return results;
+	return results;
 }
 
 // This method is a helper method in order to move the 1st and 2nd index into the 0th and first, respectively, as well

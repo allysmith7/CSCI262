@@ -3,7 +3,7 @@
 
     brute_model.cpp
 
-    Class method implementation for brute_model, the brute-force Markov 
+    Class method implementation for brute_model, the brute-force Markov
     text generation model.
 
     Author: C. Painter-Wakefield
@@ -21,7 +21,7 @@ using namespace std;
 string brute_model::generate(int sz) {
 
 	// pick random k-character substring as initial seed
-	int start = rand() % (_data.length() - _order);
+	int start = rand()%(_data.length() - _order);
 	string seed = _data.substr(start, _order);
 
 	vector<char> list;
@@ -34,17 +34,17 @@ string brute_model::generate(int sz) {
 		// find first occurrence of k-gram (seed)
 		int pos = _data.find(seed);
 
-		while (pos != string::npos && pos < _data.length()) {
+		while (pos!=string::npos && pos < _data.length()) {
 			// what comes after seed in the text?
 			char c = _data[pos + _order];
 			list.push_back(c);
 
 			// find next occurrence of seed
-			pos = _data.find(seed, pos+1);
+			pos = _data.find(seed, pos + 1);
 		}
 
 		// choose next character based on probability of occurrence in list
-		char c = list[rand() % list.size()];
+		char c = list[rand()%list.size()];
 		answer.push_back(c);
 
 		// update seed

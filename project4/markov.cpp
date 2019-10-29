@@ -16,20 +16,11 @@
 #include "map_model.h"
 #include "word_model.h"
 
-// TODO: add includes for your models
-
-#include <cstdlib>
-#include <iostream>
-#include <fstream>
-#include <sstream>
-
 using namespace std;
 
 // markov()
 // Constructs the markov application.  Most importantly, it sets up the
 // different model types.
-//
-// TODO: uncomment lines below as you add your models
 markov::markov() {
 	_model_map.emplace("brute", new brute_model);
 	_model_map.emplace("map", new map_model);
@@ -52,17 +43,17 @@ void markov::run() {
 
 	while (true) {
 		// Tell the user the current application state
-		if (_text_file != "") {
+		if (_text_file!="") {
 			cout << "The current text is " << _text_file << "." << endl;
 		}
-		if (_order != -1) {
+		if (_order!=-1) {
 			cout << "The current order is " << _order << "." << endl;
 		}
-		if (_model_type != "") {
+		if (_model_type!="") {
 			cout << "The current model is the " << _model_type;
 			cout << " model." << endl;
 		}
-		if (_random_seed != -1) {
+		if (_random_seed!=-1) {
 			cout << "The current random seed is " << _random_seed;
 			cout << "." << endl;
 		}
@@ -82,25 +73,18 @@ void markov::run() {
 		cout << endl;
 
 		switch (option) {
-		case 1:
-			set_model();
-			break;
-		case 2:
-			set_text();
-			break;
-		case 3:
-			set_order();
-			break;
-		case 4:
-			set_random_seed();
-			break;
-		case 5:
-			generate_text();
-			break;
-		case 6:
-			return;
-		default:
-			cout << "Unrecognized option! " << endl;
+			case 1: set_model();
+				break;
+			case 2: set_text();
+				break;
+			case 3: set_order();
+				break;
+			case 4: set_random_seed();
+				break;
+			case 5: generate_text();
+				break;
+			case 6: return;
+			default: cout << "Unrecognized option! " << endl;
 		}
 	}
 }
@@ -123,35 +107,34 @@ void markov::run_one(string infile, int order, string model_type, int size, int 
 // set_text()
 // Ask the user for a new text file to load as an example text.
 void markov::set_text() {
-	if (_text_file != "") {
+	if (_text_file!="") {
 		cout << "The current text file is " << _text_file << "." << endl;
 	}
 	cout << "Please enter text file name: ";
 	string infile;
 	getline(cin, infile);
-	if (infile == _text_file) {
+	if (infile==_text_file) {
 		cout << "Text file is unchanged, still " << _text_file << "." << endl;
 	} else if (_set_text(infile)) {
 		cout << "Text file changed to " << _text_file << "." << endl;
-	} else if (_text_file != "") {
+	} else if (_text_file!="") {
 		cout << "Text file is unchanged, still " << _text_file << "." << endl;
 	} else {
 		cout << "Text file is not set." << endl;
 	}
 }
 
-
 // set_order()
 // Ask the user for a new model order.
 void markov::set_order() {
-	if (_order != -1) {
+	if (_order!=-1) {
 		cout << "The current order is " << _order << "." << endl;
 	}
 	cout << "Please enter desired order (an integer greater than zero): ";
 	string response;
 	getline(cin, response);
 	int test = atoi(response.c_str());
-	if (test == _order) {
+	if (test==_order) {
 		cout << "Order is unchanged, still " << _order << "." << endl;
 	} else if (test >= 1) {
 		_order = test;
@@ -167,7 +150,7 @@ void markov::set_order() {
 // set_model()
 // Ask the user for a model type to use.
 void markov::set_model() {
-	if (_model_type != "") {
+	if (_model_type!="") {
 		cout << "The current model is the " << _model_type << " model." << endl;
 	}
 	cout << "Please enter new model name (";
@@ -203,7 +186,7 @@ void markov::set_random_seed() {
 
 // init_random()
 void markov::init_random() {
-	if (_random_seed == -1) {
+	if (_random_seed==-1) {
 		// get a different random sequence every time
 		time_t t = time(NULL);
 		srand(t);
@@ -226,7 +209,7 @@ void markov::initialize_model() {
 }
 
 void markov::generate_text() {
-	if (_model_type == "word") {
+	if (_model_type=="word") {
 		cout << "How many words would you like to generate? ";
 	} else {
 		cout << "How many characters would you like to generate? ";
@@ -267,20 +250,20 @@ bool markov::_set_text(string infile) {
 // Try to match provided model_type with a model we know about.  Return true
 // if the model type is recognized, false otherwise.
 bool markov::_set_model(string model_type) {
-	if (model_type == "") {
+	if (model_type=="") {
 		cout << "Unrecognized model type." << endl;
 		return false;
-	} else if (model_type == _model_type) {
+	} else if (model_type==_model_type) {
 		cout << "Model type unchanged, still " + model_type + " model.";
 		cout << endl;
 		return true;
-	} else if (_model_map.count(model_type) != 0) {
+	} else if (_model_map.count(model_type)!=0) {
 		_initialized = false;
 		_model_type = model_type;
 		_model = _model_map[model_type];
 		cout << "Model changed to " + model_type + " model." << endl;
 		return true;
-	} else if (_model != NULL) {
+	} else if (_model!=NULL) {
 		cout << "Unrecognized model type.  Model unchanged, still ";
 		cout << model_type + " model." << endl;
 		return false;
@@ -297,12 +280,12 @@ bool markov::_set_model(string model_type) {
 void markov::_generate_text(int size) {
 	initialize_model();
 	init_random();
-        _mark_start();
+	_mark_start();
 	string text = _model->generate(size);
 	_mark_stop();
 	cout << endl << "GENERATED TEXT:" << endl;
 	cout << text << endl << endl;
-	if (_model_type == "word") {
+	if (_model_type=="word") {
 		_report_time(string("Generated ") + to_string(size) + " words");
 	} else {
 		_report_time(string("Generated ") + to_string(size) + " characters");
@@ -327,7 +310,7 @@ void markov::_mark_stop() {
 void markov::_report_time(string action) {
 	cout << action;
 	cout << " in ";
-	cout << (_stop_time - _start_time) / double(CLOCKS_PER_SEC);
+	cout << (_stop_time - _start_time)/double(CLOCKS_PER_SEC);
 	cout << " seconds.";
 	cout << endl;
 }

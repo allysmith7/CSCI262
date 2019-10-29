@@ -17,21 +17,21 @@
 #include "model.h"
 
 class brute_model : public markov_model {
-public:
-	// give the model the example text and the model order; the model
-	// should do any preprocessing in this call
-	virtual void initialize(std::string text, int order) {
-		// copy first order characters to back to simulate wrap-around
-		_data = text + text.substr(0, order);
-		_order = order;
-	}
+ public:
+  // give the model the example text and the model order; the model
+  // should do any preprocessing in this call
+  virtual void initialize(std::string text, int order) {
+	  // copy first order characters to back to simulate wrap-around
+	  _data = text + text.substr(0, order);
+	  _order = order;
+  }
 
-	// produce a text in the style of the example
-	virtual std::string generate(int size);
+  // produce a text in the style of the example
+  virtual std::string generate(int size);
 
-protected:
-	std::string _data;
-	int _order;
+ protected:
+  std::string _data;
+  int _order;
 };
 
 #endif

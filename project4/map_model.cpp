@@ -1,9 +1,9 @@
 /*
    CSCI 262 Data Structures, Fall 2019, Project 4 - Markov
 
-   Author: Lucas Henke
+   Author: Cole Smith
 
-   Modified: 10/24/2019
+   Modified: 10/28/2019
 */
 
 #include "map_model.h"
@@ -40,7 +40,7 @@ string map_model::generate(int size) {
 	string results;
 
 	// pick random k-character substring as initial seed
-	int start = rand() % (_text.length() + _order);
+	int start = rand()%(_text.length() + _order);
 	string seed = _text.substr(start, _order);
 
 	// loops size times
@@ -50,7 +50,7 @@ string map_model::generate(int size) {
 			vector<string> possibleChars = _map.at(seed);
 
 			// generates a random index and gets the character at that index
-			int randomIndex = rand() % possibleChars.size();
+			int randomIndex = rand()%possibleChars.size();
 			string nextChar = possibleChars[randomIndex];
 
 			results += nextChar;
