@@ -40,7 +40,7 @@ string map_model::generate(int size) {
 	string results;
 
 	// pick random k-character substring as initial seed
-	int start = rand()%(_text.length() + _order);
+	int start = rand()%(_text.length() - _order);
 	string seed = _text.substr(start, _order);
 
 	// loops size times

@@ -57,7 +57,7 @@ string word_model::generate(int size) {
 	}
 
 	// finds the index of the word that will start the output
-	unsigned int start = rand()%(words.size() + size);
+	unsigned int start = rand()%(words.size() - _order);
 
 	vector<string> seed;
 	// adds the first 3 words to the seed vector
