@@ -85,6 +85,7 @@ void step1() {
 /* Step 2 - to_string, ostream << */
 /**********************************/
 
+
 /* along with step 2 tests, uncomment this function */
 string convert(clock_time c) {
 	ostringstream out;
