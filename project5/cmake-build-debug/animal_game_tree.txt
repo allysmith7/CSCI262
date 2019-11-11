@@ -1,7 +1,5 @@
 #Q Is it a mammal?
 #Q Does it have stripes?
-#Q Does it lay eggs?
-#A Is it a platypus?
 #A Is it a zebra?
 #A Is it a lion?
 #Q Is it a bird?
