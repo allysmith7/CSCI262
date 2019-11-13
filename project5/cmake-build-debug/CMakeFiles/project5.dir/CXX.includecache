@@ -7,14 +7,14 @@
 #IncludeRegexTransform: 
 
 /Users/cole/bin/csci262/project5/animal.cpp
-iostream
+cstdlib
 -
 fstream
 -
-string
--
-cstdlib
+iostream
 -
 queue
+-
+string
 -
 

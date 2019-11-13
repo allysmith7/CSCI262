@@ -57,9 +57,13 @@ int main() {
     if (root == nullptr)
         return -1;
 
+
     while (true) {
         string tmp;
         int choice;
+
+        // clears history from previous times playing
+        history.clear();
 
         // print_tree(root, "");
 
@@ -79,8 +83,6 @@ int main() {
                 write_game_tree(root);
                 break;
             case 3:
-                delete_game_tree(root);
-                cout << "Freed memory from tree." << endl;
                 break;
             default:
                 std::cout << "Sorry, I don't understand." << endl
@@ -119,7 +121,8 @@ node* read_game_tree() {
  * @param root Root of the game tree
  */
 void play_game(node* root) {
-    string question = (root->data).substr(3);
+    // asks the user the question and gets their response
+    string question = (root->data).substr(3);  // uses a substring to remove the '#Q' or '#A'
     string response;
     std::cout << question << endl;
     std::getline(cin, response);
@@ -132,19 +135,25 @@ void play_game(node* root) {
     // if yes, uses left branch
     if (response == "y" || response == "yes") {
         if (root->left == nullptr) {
+            // if there is no left branch, then it is a leaf and you guessed their animal
             std::cout << "Yay! I guessed your animal!\n"
                       << endl;
             return;
         } else {
+            // if it isn't a leaf, the question and answer are recorded and the game continues on the next node
             pair<string, string> p(question, "YES");
             history.push_back(p);
             play_game(root->left);
         }
     } else if (response == "n" || response == "no") {
         if (root->right == nullptr) {
+            // if it is a leaf and the right node, then you got it wrong
             std::cout << "Darn I lost :(" << endl
                       << endl;
 
+        gotitwrong:
+
+            // asks if the user wants to expand the tree
             string yn;  // holds yes or no
             std::cout << "Would you like to expand the tree (y/n)? ";
             std::getline(cin, yn);
@@ -159,13 +168,20 @@ void play_game(node* root) {
                 std::cout << "\n"
                           << endl;
 
+                // outputs history to stdout
                 std::cout << "I asked..." << endl;
-                for (pair<string, string> p : history) {
-                    string q = p.first + " " + p.second;
+                for (int i = 0; i < history.size(); i++) {
+                    auto pair = history.at(i);
+                    /*
+                	 * NOTE: substring is used to fix a weird problem where the question was ending with a "\r" escape
+                	 * character, causing the output to overwrite itself... This was the only solution I could find /shrug
+                	 */
+                    string q = pair.first.substr(0, pair.first.size() - 1) + " " + history.at(i).second;
                     std::cout << q << endl;
                 }
                 std::cout << endl;
 
+                // prompts the user for the new animal and question
                 std::cout << "Enter a new animal in the form of a question, \n"
                           << "e.g., 'Is it a whale?':" << endl;
                 string new_animal;
@@ -176,23 +192,31 @@ void play_game(node* root) {
                 string new_question;
                 std::getline(cin, new_question);
 
-                string old_question = question;
+                const string& old_question = question;
 
+                // adds the new animal and question to the tree
                 root->data = "#Q " + new_question;
                 root->left = new node("#A " + new_animal);
                 root->right = new node("#A " + old_question);
-
-                write_game_tree(root);
+            } else if (yn == "n" || yn == "no") {
+                return;
+            } else {
+				cout << "Unable to interpret answer. Please input 'y', 'yes', 'n', or 'no'" << endl;
+				goto gotitwrong;
             }
             return;
-        } else {
+        } else if (response == "n" || response == "no") {
             pair<string, string> p(question, "NO");
             history.push_back(p);
             play_game(root->right);
+        } else {
+            std::cout << "Unable to interpret answer. Please input 'y', 'yes', 'n', or 'no'"
+                      << endl;
         }
     } else {
         std::cout << "Unable to interpret answer. Please input 'y', 'yes', 'n', or 'no'"
                   << endl;
+        play_game(root);
     }
 }
 
@@ -237,7 +261,8 @@ void read_preorder(node* tree, ifstream& fin) {
 }
 
 void write_preorder(node* tree, ofstream& fout) {
-    if (tree == nullptr) return;
+    if (tree == nullptr)
+        return;
     fout << tree->data << endl;
     write_preorder(tree->left, fout);
     write_preorder(tree->right, fout);
