@@ -44,7 +44,7 @@ node* read_game_tree();
 void write_game_tree(node*);
 void delete_game_tree(node*);
 
-// TODO: Add helper method templates here, such as read_preorder().
+// Helper method templates
 void read_preorder(node* tree, ifstream& fin);
 void write_preorder(node* tree, ofstream& fout);
 void print_tree(node* root, string indent);
@@ -171,7 +171,7 @@ void play_game(node* root) {
                 // outputs history to stdout
                 std::cout << "I asked..." << endl;
                 for (int i = 0; i < history.size(); i++) {
-                    auto pair = history.at(i);
+                    std::__1::pair<std::__1::string, std::__1::string> pair = history.at(i);
                     /*
                 	 * NOTE: substring is used to fix a weird problem where the question was ending with a "\r" escape
                 	 * character, causing the output to overwrite itself... This was the only solution I could find /shrug
@@ -247,27 +247,46 @@ void delete_game_tree(node* root) {
 }
 
 void read_preorder(node* tree, ifstream& fin) {
+    // if the input file doesn't exist, it stops
     if (fin.eof())
         return;
+
+    // stores the question in a string
     string val;
     std::getline(fin, val);
     tree->data = val;
+
+    // if the value is a leaf (as noted by starting with '#A'), it stops after assigning it a value
     if (val[1] == 'A')
         return;
+    
+    // if it isn't a leaf, a left and right node is created
     tree->left = new node;
     tree->right = new node;
+
+    // recursively reads the next nodes from the file
     read_preorder(tree->left, fin);
     read_preorder(tree->right, fin);
 }
 
 void write_preorder(node* tree, ofstream& fout) {
+    // if you have reached the end, it returns
     if (tree == nullptr)
         return;
+
+    // outputs the question to the file
     fout << tree->data << endl;
+
+    // recursively writes the following nodes in pre-order
     write_preorder(tree->left, fout);
     write_preorder(tree->right, fout);
 }
 
+/**
+ * A function I wrote to print out the tree in a way that is visually interpretable
+ * @param root: root of the tree
+ * @param indent: the whitespace used to offset the different levels of the tree
+ */
 void print_tree(node* root, string indent) {
     if (root == nullptr)
         return;

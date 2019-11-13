@@ -12,20 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cfdff1f-ec2b-4936-8138-cd61532b3eb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../project3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project3/cmake-build-debug/CMakeFiles/hangman.dir/hangman.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/cmake-build-debug/CMakeFiles/hangman.dir/hangman.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project3/cmake-build-debug/CMakeFiles/hangman.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/cmake-build-debug/CMakeFiles/hangman.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../project3/cmake-build-debug/hangman" beforeDir="false" afterPath="$PROJECT_DIR$/../project3/cmake-build-debug/hangman" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/brute_model.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/brute_model.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/map_model.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/map_model.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/markov.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/markov.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/word_model.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/word_model.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/code" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/code" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map_model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/map_model.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/word_model.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/word_model.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +91,8 @@
       <workItem from="1572307665695" duration="699000" />
       <workItem from="1572368828937" duration="932000" />
       <workItem from="1572465184584" duration="412000" />
+      <workItem from="1572492751907" duration="143000" />
+      <workItem from="1572634463134" duration="29000" />
     </task>
     <servers />
   </component>
