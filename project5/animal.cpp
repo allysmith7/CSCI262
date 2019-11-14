@@ -54,8 +54,11 @@ void print_tree(node* root, string indent);
  */
 int main() {
     node* root = read_game_tree();
-    if (root == nullptr)
-        return -1;
+    // if the root node has no data, stop the program
+    if (root->data == "") {
+    	std::cerr << "Error reading game tree. Please ensure that the file is in the correct location and is properly populated." << std::endl;
+		return -1;
+	}
 
 
     while (true) {
@@ -103,7 +106,7 @@ int main() {
  */
 node* read_game_tree() {
     ifstream fin("animal_game_tree.txt");
-    if (!fin.is_open()) {
+    if (fin.eof() || !fin.is_open()) {
         cerr << "Problem opening the file. Ensure 'animal_game_tree.txt is in "
                 "./cmake-build-debug/"
              << endl;
@@ -256,10 +259,14 @@ void read_preorder(node* tree, ifstream& fin) {
     std::getline(fin, val);
     tree->data = val;
 
+    // if the string has a size of 0, it stops
+    if (val.size() == 0)
+    	return;
+
     // if the value is a leaf (as noted by starting with '#A'), it stops after assigning it a value
     if (val[1] == 'A')
         return;
-    
+
     // if it isn't a leaf, a left and right node is created
     tree->left = new node;
     tree->right = new node;
