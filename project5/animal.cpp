@@ -21,7 +21,7 @@ vector<pair<string, string> > history;
 class node {
    public:
     node();
-    node(string str);
+    explicit node(const string& str);
     string data;
     node* left;
     node* right;
@@ -33,7 +33,7 @@ node::node() {
     right = nullptr;
 }
 
-node::node(string str) {
+node::node(const string& str) {
     data = str;
     left = nullptr;
     right = nullptr;
@@ -42,12 +42,12 @@ node::node(string str) {
 void play_game(node*);
 node* read_game_tree();
 void write_game_tree(node*);
-void delete_game_tree(node*);
+//void delete_game_tree(node*);
 
 // Helper method templates
 void read_preorder(node* tree, ifstream& fin);
 void write_preorder(node* tree, ofstream& fout);
-void print_tree(node* root, string indent);
+void print_tree(node* root, const string& indent);
 
 /**
  * Handles showing the main menu/basic UI
@@ -55,7 +55,7 @@ void print_tree(node* root, string indent);
 int main() {
     node* root = read_game_tree();
     // if the root node has no data, stop the program
-    if (root->data == "") {
+    if (root->data.empty()) {
     	std::cerr << "Error reading game tree. Please ensure that the file is in the correct location and is properly populated." << std::endl;
 		return -1;
 	}
@@ -76,7 +76,7 @@ int main() {
         std::cout << "  3) Quit" << endl;
         std::cout << "Please make your selection: ";
         std::getline(cin, tmp);
-        choice = atoi(tmp.c_str());
+        choice = (int)strtold(tmp.c_str(), nullptr);
 
         switch (choice) {
             case 1:
@@ -96,18 +96,17 @@ int main() {
             break;
     }
 
-    delete_game_tree(root);
     return 0;
 }
 
 /**
- * Sets up the recursive call to the read_preorder
+ * Sets up the recursive call to the read_preorder()
  * @return root of the tree
  */
 node* read_game_tree() {
     ifstream fin("animal_game_tree.txt");
     if (fin.eof() || !fin.is_open()) {
-        cerr << "Problem opening the file. Ensure 'animal_game_tree.txt is in "
+        cerr << "Problem opening the file. Ensure 'animal_game_tree.txt is in " <<
                 "./cmake-build-debug/"
              << endl;
         return nullptr;
@@ -173,13 +172,12 @@ void play_game(node* root) {
 
                 // outputs history to stdout
                 std::cout << "I asked..." << endl;
-                for (int i = 0; i < history.size(); i++) {
-                    std::__1::pair<std::__1::string, std::__1::string> pair = history.at(i);
+                for (auto & pair : history) {
                     /*
-                	 * NOTE: substring is used to fix a weird problem where the question was ending with a "\r" escape
-                	 * character, causing the output to overwrite itself... This was the only solution I could find /shrug
+                     * NOTE: substring is used to fix a weird problem where the question was ending with a "\r" escape
+                	 * character, causing the output to overwrite itself... This was the only solution I could find
                 	 */
-                    string q = pair.first.substr(0, pair.first.size() - 1) + " " + history.at(i).second;
+                    string q = pair.first.substr(0, pair.first.size() - 1) + " " + pair.second;
                     std::cout << q << endl;
                 }
                 std::cout << endl;
@@ -241,13 +239,13 @@ void write_game_tree(node* root) {
 /**
  * Deletes the game tree
  * @param root Root of the game tree
- */
+ *
 void delete_game_tree(node* root) {
     // Optional. Do a post-order deletion of the game tree.
     // This isn't strictly needed as the program exits after this is called,
     // which frees up all the memory anyway.
-    return;
-}
+    }
+ */
 
 void read_preorder(node* tree, ifstream& fin) {
     // if the input file doesn't exist, it stops
@@ -260,7 +258,7 @@ void read_preorder(node* tree, ifstream& fin) {
     tree->data = val;
 
     // if the string has a size of 0, it stops
-    if (val.size() == 0)
+    if (val.empty())
     	return;
 
     // if the value is a leaf (as noted by starting with '#A'), it stops after assigning it a value
@@ -294,7 +292,7 @@ void write_preorder(node* tree, ofstream& fout) {
  * @param root: root of the tree
  * @param indent: the whitespace used to offset the different levels of the tree
  */
-void print_tree(node* root, string indent) {
+void print_tree(node* root, const string& indent) {
     if (root == nullptr)
         return;
     std::cout << indent << root->data << endl;
