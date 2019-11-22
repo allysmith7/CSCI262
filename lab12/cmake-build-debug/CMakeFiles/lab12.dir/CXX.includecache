@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/cole/bin/csci262/lab12/analog_clock.h
+string
+-
+utility
+-
+
+/Users/cole/bin/csci262/lab12/tests.cpp
+iostream
+-
+string
+-
+unix_clock.h
+/Users/cole/bin/csci262/lab12/unix_clock.h
+analog_clock.h
+/Users/cole/bin/csci262/lab12/analog_clock.h
+
+/Users/cole/bin/csci262/lab12/unix_clock.h
+string
+-
+
