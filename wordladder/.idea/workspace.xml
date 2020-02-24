@@ -12,9 +12,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82ebd6d2-fa52-4563-8a24-532dbe78f45b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../project5/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../project5/project4.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numberfill/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../numberfill/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numberfill/main.out.dSYM/Contents/Resources/DWARF/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../numberfill/main.out.dSYM/Contents/Resources/DWARF/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numberfill/numberfill.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../numberfill/numberfill.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal.dSYM/Contents/Resources/DWARF/animal" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal.dSYM/Contents/Resources/DWARF/animal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal_game_tree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal_game_tree.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/cmake-build-debug/animal_game_tree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/cmake-build-debug/animal_game_tree.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/project4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +32,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -49,6 +55,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -86,6 +93,8 @@
       <updated>1574294054464</updated>
       <workItem from="1574294055627" duration="2264000" />
       <workItem from="1574462523997" duration="27000" />
+      <workItem from="1578613998722" duration="463000" />
+      <workItem from="1578872098145" duration="23000" />
     </task>
     <servers />
   </component>

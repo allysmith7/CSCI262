@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Users/cole/bin/csci262/lab05/lodepng.cpp
+lodepng.h
+/Users/cole/bin/csci262/lab05/lodepng.h
+limits.h
+-
+stdio.h
+-
+stdlib.h
+-
+
 /Users/cole/bin/csci262/lab05/lodepng.h
 string.h
 -
@@ -20,6 +30,18 @@ iostream
 lodepng.h
 /Users/cole/bin/csci262/lab05/lodepng.h
 
+/Users/cole/bin/csci262/lab05/main.cpp
+iostream
+-
+sstream
+-
+cstdlib
+-
+ctime
+-
+mondrian.h
+/Users/cole/bin/csci262/lab05/mondrian.h
+
 /Users/cole/bin/csci262/lab05/mondrian.cpp
 cstdlib
 -
@@ -32,6 +54,14 @@ mondrian.h
 
 /Users/cole/bin/csci262/lab05/mondrian.h
 string
+-
+picture.h
+/Users/cole/bin/csci262/lab05/picture.h
+
+/Users/cole/bin/csci262/lab05/picture.cpp
+algorithm
+-
+stdexcept
 -
 picture.h
 /Users/cole/bin/csci262/lab05/picture.h

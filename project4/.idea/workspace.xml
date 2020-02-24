@@ -12,11 +12,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cfdff1f-ec2b-4936-8138-cd61532b3eb0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../lab01/.idea/lab01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab03/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wordladder/.idea/wordladder.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/rwg.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/rwg.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/cmake-build-debug/rwg" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/cmake-build-debug/rwg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/mondrian.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/mondrian.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/mondrian.dir/lodepng.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/mondrian.dir/lodepng.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/mondrian.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/mondrian.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/mondrian.dir/mondrian.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/mondrian.dir/mondrian.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/mondrian.dir/picture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/cmake-build-debug/CMakeFiles/mondrian.dir/picture.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab05/cmake-build-debug/mondrian" beforeDir="false" afterPath="$PROJECT_DIR$/../lab05/cmake-build-debug/mondrian" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numberfill/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../numberfill/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numberfill/main.out.dSYM/Contents/Resources/DWARF/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../numberfill/main.out.dSYM/Contents/Resources/DWARF/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numberfill/numberfill.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../numberfill/numberfill.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../project2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/map_model.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/map_model.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/word_model.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/code.dir/word_model.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/code" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/code" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal.dSYM/Contents/Resources/DWARF/animal" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal.dSYM/Contents/Resources/DWARF/animal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal_game_tree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal_game_tree.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/cmake-build-debug/animal_game_tree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/cmake-build-debug/animal_game_tree.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/project4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wordladder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../wordladder/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +62,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -93,6 +118,8 @@
       <workItem from="1572465184584" duration="412000" />
       <workItem from="1572492751907" duration="143000" />
       <workItem from="1572634463134" duration="29000" />
+      <workItem from="1581643233319" duration="215000" />
+      <workItem from="1581705607423" duration="27000" />
     </task>
     <servers />
   </component>

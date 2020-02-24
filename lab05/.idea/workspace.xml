@@ -11,7 +11,35 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66616670-585a-490a-8935-e64b094a2d1b" name="Default Changelist" comment="" />
+    <list default="true" id="66616670-585a-490a-8935-e64b094a2d1b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../lab01/.idea/lab01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab03/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../wordladder/.idea/wordladder.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/rwg.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/cmake-build-debug/CMakeFiles/rwg.dir/rwg.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab03/cmake-build-debug/rwg" beforeDir="false" afterPath="$PROJECT_DIR$/../lab03/cmake-build-debug/rwg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mondrian.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mondrian.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mondrian.dir/lodepng.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mondrian.dir/lodepng.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mondrian.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mondrian.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mondrian.dir/mondrian.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mondrian.dir/mondrian.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mondrian.dir/picture.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/mondrian.dir/picture.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/mondrian" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/mondrian" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numberfill/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../numberfill/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numberfill/main.out.dSYM/Contents/Resources/DWARF/main.out" beforeDir="false" afterPath="$PROJECT_DIR$/../numberfill/main.out.dSYM/Contents/Resources/DWARF/main.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../numberfill/numberfill.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../numberfill/numberfill.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal.dSYM/Contents/Resources/DWARF/animal" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal.dSYM/Contents/Resources/DWARF/animal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/animal_game_tree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/animal_game_tree.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/cmake-build-debug/animal_game_tree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../project5/cmake-build-debug/animal_game_tree.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../project5/project4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wordladder/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../wordladder/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +50,11 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1R7ScBlMqs17ZU9LSNS97Y7m9PV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -71,10 +103,25 @@
       <workItem from="1569343911226" duration="66000" />
       <workItem from="1569343989265" duration="175000" />
       <workItem from="1569426025234" duration="14000" />
+      <workItem from="1579655635007" duration="81000" />
+      <workItem from="1580351327688" duration="16000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

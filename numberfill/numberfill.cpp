@@ -14,28 +14,11 @@ bool isVerticalBoundary(vector<string>& picture, int row, int col);
 bool isNumber(char c);
 
 int main() {
-    vector<string> picture;
-    picture.push_back("1X2X3X4X5X6X7X8X9X0X");
-    picture.push_back("X4X5X6X7X8X9X0X1X2X3");
-    picture.push_back("1X2X3X4X5X6X7X8X9X0X");
-    picture.push_back("X4X5X6X7X8X9X0X1X2X3");
-    picture.push_back("1X2X3X4X5X6X7X8X9X0X");
-    picture.push_back("X4X5X6X7X8X9X0X1X2X3");
-    picture.push_back("1X2X3X4X5X6X7X8X9X0X");
-    picture.push_back("X4X5X6X7X8X9X0X1X2X3");
-    picture.push_back("1X2X3X4X5X6X7X8X9X0X");
-    picture.push_back("X4X5X6X7X8X9X0X1X2X3");
-    picture.push_back("1X2X3X4X5X6X7X8X9X0X");
-    picture.push_back("X4X5X6X7X8X9X0X1X2X3");
-    picture.push_back("1X2X3X4X5X6X7X8X9X0X");
-    picture.push_back("X4X5X6X7X8X9X0X1X2X3");
-    picture.push_back("1X2X3X4X5X6X7X8X9X0X");
-    picture.push_back("X4X5X6X7X8X9X0X1X2X3");
-    picture.push_back("1X2X3X4X5X6X7X8X9X0X");
-    picture.push_back("X4X5X6X7X8X9X0X1X2X3");
-    picture.push_back("1X2X3X4X5X6X7X8X9X0X");
-    picture.push_back("X4X5X6X7X8X9X0X1X2X3");
-
+    vector<string> picture = {"..X.....",
+                              "..X..0..",
+                              "1.X.....",
+                              "..X.....",
+                              "........"};
 
     cout << gradient(picture) << endl;
 
@@ -125,7 +108,8 @@ int gradient(vector<string> picture) {
         // fills in region
         for (int r = (regionBounds.first).first; r <= (regionBounds.second).first; r++) {
             for (int c = (regionBounds.first).second; c <= (regionBounds.second).second; c++) {
-                if (picture[r][c] == 'X') continue;
+                if (picture[r][c] == 'X')
+                    continue;
                 if ((maxValueAndColumn.first + c - maxValueAndColumn.second) >= 0 && (maxValueAndColumn.first + c - maxValueAndColumn.second) < 10) {
                     picture[r][c] = to_string(maxValueAndColumn.first + c - maxValueAndColumn.second)[0];
                 } else {
@@ -185,26 +169,29 @@ pair<int, int> findBottomRightCorner(vector<string>& picture, int row, int col) 
     boundaryRow = picture.size() - 1;
     boundaryCol = picture.at(0).size() - 1;
 
-    while (r < picture.size()) {
-        while (!foundCol && c < picture.at(r).size()) {
-            // looks for vertical boundary
-            if (picture[r][c] == 'X' && isVerticalBoundary(picture, r, c)) {
-                boundaryCol = c - 1;
-                foundCol = true;
+    while (!foundCol && c < picture.at(r).size()) {
+        // looks for vertical boundary
+        if (picture[r][c] == 'X') {
+            boundaryCol = c - 1;
+            foundCol = true;
+        }
+
+        while (foundCol && r < picture.size()) {
+            if (picture[r][boundaryCol] == 'X') {
+                boundaryRow = r - 1;
+                foundRow = true;
                 break;
             }
-            c++;
+            r++;
         }
 
-        if (foundCol && picture[r][boundaryCol] == 'X' && isHorizontalBoundary(picture, r, boundaryCol)) {
-            boundaryRow = r;
-            foundRow = true;
-            break;
-        }
-        r++;
+        c++;
     }
 
-    pair<int, int> bottomRight(boundaryRow, boundaryCol);
+    pair<int, int> bottomRight(picture.size() - 1, picture.at(0).size() - 1);
+    if (foundRow && foundCol) {
+        pair<int, int> bottomRight(boundaryRow, boundaryCol);
+    }
     return bottomRight;
 }
 
@@ -265,7 +252,8 @@ bool isNumber(char c) {
 
 int getValue(map<int, char>& associations, char c) {
     for (auto p : associations) {
-        if (p.second == c) return p.first;
+        if (p.second == c)
+            return p.first;
     }
 
     return 0;

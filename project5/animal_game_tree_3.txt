@@ -1,0 +1,17 @@
+#Q Is it a mammal?
+#Q Does it have stripes?
+#A Is it a zebra?
+#Q Does it climb in trees?
+#A Is it a monkey?
+#Q Are they in Yellowstone?
+#A Is it a bear?
+#A Is it a lion?
+#Q Is it a bird?
+#Q Does it fly?
+#A Is it an eagle?
+#Q Does it run quickly?
+#A Is it an ostrich?
+#A Is it a penguin?
+#Q Does it have a shell?
+#A Is it a turtle?
+#A Is it a gila monster?

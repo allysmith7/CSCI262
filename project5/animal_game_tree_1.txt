@@ -5,5 +5,7 @@
 #Q Is it a bird?
 #Q Does it fly?
 #A Is it an eagle?
+#Q Does it run quickly?
+#A Is it an ostrich?
 #A Is it a penguin?
 #A Is it a gila monster?

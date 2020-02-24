@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Users/cole/bin/csci262/lab03/main.cpp
+iostream
+-
+fstream
+-
+string
+-
+rwg.h
+/Users/cole/bin/csci262/lab03/rwg.h
+
 /Users/cole/bin/csci262/lab03/rwg.cpp
 rwg.h
 /Users/cole/bin/csci262/lab03/rwg.h

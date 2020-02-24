@@ -1,8 +1,8 @@
 /*
         animal.cpp
 
-        author: L. Henke and C. Painter-Wakefield
-        date: 04 November 2019
+        author: Cole Smith
+        date: 02 December 2019
 
         Animal/20 questions program for CSCI 262, starter code.
 */
@@ -17,6 +17,9 @@ using namespace std;
 
 // holds questions and answers for learning from the mistake
 vector<pair<string, string> > history;
+
+// holds an integer cooresponding to how many times the game tree has been written to the file again, in order to keep multiple versions
+int new_files_created = 0;
 
 class node {
    public:
@@ -226,7 +229,10 @@ void play_game(node* root) {
  * @param root The root of the tree
  */
 void write_game_tree(node* root) {
-    ofstream fout("animal_game_tree.txt");
+    string filename = "animal_game_tree_";
+    string extension = ".txt";
+    string final = filename + to_string(++new_files_created) + extension;
+    ofstream fout(final);
     if (!fout.is_open()) {
         std::cerr << "Error: Unable to write to file." << endl;
         return;
